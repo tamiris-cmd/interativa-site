@@ -322,3 +322,7 @@ a{color:inherit;text-decoration:none}
     height: 44px;
   }
 }
+/* Ajuste definitivo do tamanho da logo no header */
+.header-wrap{ padding: 18px 0 !important; }
+.brand{ gap: 12px !important; }
+.brand-logo{ height: 72px !important; width: auto !important; }
