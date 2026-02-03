@@ -311,3 +311,8 @@ a{color:inherit;text-decoration:none}
   .footer-grid{grid-template-columns: 1fr 1fr}
   .form-row{grid-template-columns: 1fr}
 } 
+.brand-logo{
+  height: 36px;
+  width: auto;
+  display: block;
+}
