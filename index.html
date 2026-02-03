@@ -1,313 +1,315 @@
-:root{
-  --bg:#0A0F1E;
-  --bg2:#0D1B2A;
-  --text:#FFFFFF;
-  --muted:#B0B8C1;
-  --muted2:#7A8A9A;
-  --card:#0f2440;
-  --card2: rgba(0,240,255,.08);
-  --line: rgba(0,240,255,.18);
-  --primary:#00F0FF;
-  --primary2:#00D9E8;
-  --shadow: 0 12px 30px rgba(0,0,0,.15);
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IA Interativa — Automação Inteligente para Negócios</title>
+  <meta name="description" content="Automatize atendimento, marketing, vendas e tarefas internas com soluções de IA personalizadas para sua empresa." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
 
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
-}
-a{color:inherit;text-decoration:none}
-.container{max-width:1200px;margin:0 auto;padding:0 20px}
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-wrap">
+      <a class="brand" href="#top">
+        <span class="brand-mark">IA</span>
+        <span class="brand-name">Interativa</span>
+      </a>
 
-/* Buttons */
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  padding:14px 28px;
-  border-radius:10px;
-  font-weight:600;
-  border:1px solid transparent;
-  transition:.25s ease;
-  cursor:pointer;
-}
-.btn-small{padding:10px 16px;border-radius:10px}
-.btn-primary{
-  background:var(--primary);
-  color:var(--bg);
-}
-.btn-primary:hover{
-  background:var(--primary2);
-  transform:translateY(-2px);
-  box-shadow:0 14px 40px rgba(0,240,255,.18);
-}
-.btn-secondary{
-  background:transparent;
-  border-color:rgba(0,240,255,.55);
-  color:var(--primary);
-}
-.btn-secondary:hover{
-  background:rgba(0,240,255,.08);
-  transform:translateY(-2px);
-}
+      <nav class="nav">
+        <a href="#servicos">Serviços</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </nav>
 
-/* Header */
-.header{
-  position:sticky;
-  top:0;
-  z-index:30;
-  background:rgba(10,15,30,.72);
-  backdrop-filter: blur(10px);
-  border-bottom:1px solid rgba(255,255,255,.06);
-}
-.header-wrap{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:14px 0;
-  gap:20px;
-}
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-weight:700;
-}
-.brand-mark{
-  display:inline-flex;
-  width:36px;height:36px;
-  align-items:center;justify-content:center;
-  border-radius:10px;
-  background:rgba(0,240,255,.14);
-  border:1px solid rgba(0,240,255,.25);
-  color:var(--primary);
-  font-family:'Montserrat',sans-serif;
-}
-.brand-name{font-family:'Montserrat',sans-serif}
-.nav{
-  display:flex;
-  gap:18px;
-  color:var(--muted);
-}
-.nav a{
-  padding:10px 10px;
-  border-radius:10px;
-}
-.nav a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+      <a class="btn btn-primary btn-small" href="#contato">Quero consultoria</a>
+    </div>
+  </header>
 
-/* Hero */
-.hero{
-  background: linear-gradient(135deg, var(--bg) 0%, var(--bg2) 100%);
-  padding:86px 0 70px;
-}
-.hero-grid{
-  display:grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap:52px;
-  align-items:center;
-}
-.hero-title{
-  font-family:'Montserrat',sans-serif;
-  font-size:48px;
-  line-height:1.15;
-  margin-bottom:18px;
-}
-.hero-subtitle{
-  font-size:18px;
-  color:var(--muted);
-  margin-bottom:30px;
-}
-.hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:18px}
-.hero-proof{font-size:14px;color:var(--muted2)}
-.hero-visual{display:flex; justify-content:center}
-.hero-card{
-  width:100%;
-  max-width:420px;
-  background: rgba(0,240,255,.06);
-  border:1px solid rgba(0,240,255,.18);
-  border-radius:16px;
-  padding:26px;
-  box-shadow: var(--shadow);
-}
-.hero-card-title{font-weight:700; margin-bottom:14px; color:var(--primary)}
-.hero-card-list{list-style:none; display:grid; gap:10px; margin-bottom:16px; color:var(--text)}
-.hero-card-list li{
-  padding-left:16px;
-  position:relative;
-}
-.hero-card-list li:before{
-  content:"";
-  position:absolute; left:0; top:10px;
-  width:6px; height:6px; border-radius:50%;
-  background: var(--primary);
-}
-.hero-card-foot{font-size:13px;color:var(--muted)}
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-title">IA que transforma seu negócio — sem complicação.</h1>
+          <p class="hero-subtitle">
+            Automatize atendimento, marketing, vendas e tarefas internas com soluções de inteligência artificial
+            totalmente personalizadas para sua empresa.
+          </p>
 
-/* Sections */
-.section{padding:80px 0; background:#F5F7FA; color:#0A0F1E}
-.section-title{
-  font-family:'Montserrat',sans-serif;
-  font-size:40px;
-  line-height:1.2;
-  text-align:center;
-  margin:0 auto 16px;
-  max-width:980px;
-}
-.section-subtitle{
-  text-align:center;
-  font-size:18px;
-  color:#5A6B7A;
-  max-width:900px;
-  margin:0 auto 50px;
-}
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#contato">Quero transformar meu negócio</a>
+            <a class="btn btn-secondary" href="#servicos">Ver soluções</a>
+          </div>
 
-/* grids */
-.grid-3{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:26px;
-}
-.card{
-  background:#FFFFFF;
-  border-radius:14px;
-  padding:26px;
-  box-shadow: 0 4px 14px rgba(0,0,0,.06);
-  transition: .25s ease;
-  border:1px solid rgba(0,0,0,.05);
-}
-.card:hover{transform: translateY(-4px); box-shadow: 0 14px 30px rgba(0,0,0,.10)}
-.card h3{font-size:18px;margin-bottom:10px}
-.card p{color:#5A6B7A}
+          <p class="hero-proof">Mais de 200 empresas impulsionadas com automação inteligente.</p>
+        </div>
 
-/* Services section (dark) */
-.services{
-  background: var(--bg);
-  color: var(--text);
-}
-.section-title-on-dark{color:var(--text)}
-.section-subtitle-on-dark{color:var(--muted)}
-.card-dark{
-  background: rgba(0,240,255,.06);
-  border:1px solid rgba(0,240,255,.16);
-  box-shadow:none;
-}
-.card-dark p{color:var(--muted)}
-.card-link{
-  display:inline-block;
-  margin-top:12px;
-  color:var(--primary);
-  font-weight:600;
-}
-.card-link:hover{text-decoration:underline}
+        <div class="hero-visual">
+          <div class="hero-card">
+            <p class="hero-card-title">O que a IA faz por você</p>
+            <ul class="hero-card-list">
+              <li>Atende clientes 24/7</li>
+              <li>Responde, qualifica e direciona</li>
+              <li>Cria conteúdo e roteiros</li>
+              <li>Automatiza tarefas repetitivas</li>
+              <li>Otimiza campanhas com dados</li>
+            </ul>
+            <p class="hero-card-foot">Implementação rápida • Suporte humano + IA</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* Testimonials */
-.quote{font-weight:600; color:#0A0F1E}
-.quote-author{margin-top:10px; color:#7A8A9A; font-size:14px}
+    <!-- PROBLEMAS -->
+    <section class="section problems">
+      <div class="container">
+        <h2 class="section-title">Seu negócio está perdendo tempo — e dinheiro — com tarefas que a IA faz melhor.</h2>
+        <p class="section-subtitle">
+          Atendimento lento, processos manuais, campanhas sem resultado, falta de conteúdo, sobrecarga da equipe…
+          Enquanto isso, seus concorrentes já estão automatizando tudo.
+        </p>
 
-/* CTA */
-.cta{
-  background: linear-gradient(135deg, var(--bg) 0%, var(--bg2) 100%);
-  padding:60px 0;
-  color: var(--text);
-}
-.cta-box{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:22px;
-  padding:30px;
-  border-radius:16px;
-  background: rgba(0,240,255,.06);
-  border:1px solid rgba(0,240,255,.18);
-}
-.cta-title{
-  font-family:'Montserrat',sans-serif;
-  font-size:28px;
-  margin-bottom:10px;
-}
-.cta-subtitle{color:var(--muted)}
+        <div class="grid-3">
+          <div class="card">
+            <h3>Atendimento limitado e filas no WhatsApp</h3>
+            <p>Respostas lentas reduzem conversão e aumentam desistências.</p>
+          </div>
+          <div class="card">
+            <h3>Falta de tempo para criar conteúdo</h3>
+            <p>Sem consistência, o alcance cai e o custo de aquisição sobe.</p>
+          </div>
+          <div class="card">
+            <h3>Processos internos travando o crescimento</h3>
+            <p>Rotinas manuais consomem o tempo da sua equipe.</p>
+          </div>
+          <div class="card">
+            <h3>Equipe sobrecarregada</h3>
+            <p>Mais demanda, mesma equipe — e a operação começa a falhar.</p>
+          </div>
+          <div class="card">
+            <h3>Campanhas pagas pouco otimizadas</h3>
+            <p>Sem dados e automação, o ROI fica imprevisível.</p>
+          </div>
+          <div class="card">
+            <h3>Falta de escalabilidade</h3>
+            <p>Você cresce, mas os custos crescem junto — e a margem cai.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* Contact (light) */
-.contact{background:#F5F7FA; color:#0A0F1E}
-.form{
-  max-width:820px;
-  margin: 0 auto;
-  background:#FFFFFF;
-  border-radius:16px;
-  padding:26px;
-  box-shadow: 0 8px 26px rgba(0,0,0,.08);
-  border:1px solid rgba(0,0,0,.06);
-}
-.form label{display:block; font-weight:600; margin-bottom:14px}
-.form input, .form select{
-  width:100%;
-  margin-top:8px;
-  padding:14px 14px;
-  border-radius:10px;
-  border:1px solid #D0D8E0;
-  font: inherit;
-}
-.form input:focus, .form select:focus{
-  outline:none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(0,240,255,.12);
-}
-.form-row{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:14px;
-}
-.form button{margin-top:10px}
-.form-foot{margin-top:14px; color:#5A6B7A; font-size:14px; text-align:center}
-.inline-link{color:#009fb0; font-weight:700}
-.inline-link:hover{text-decoration:underline}
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="section services">
+      <div class="container">
+        <h2 class="section-title section-title-on-dark">Automação inteligente para cada parte do seu negócio.</h2>
+        <p class="section-subtitle section-subtitle-on-dark">
+          Soluções de IA personalizadas para reduzir custos, acelerar processos e aumentar vendas.
+        </p>
 
-/* Footer */
-.footer{
-  background: var(--bg);
-  color: var(--text);
-  padding: 56px 0 30px;
-  border-top:1px solid rgba(255,255,255,.06);
-}
-.footer-grid{
-  display:grid;
-  grid-template-columns: 1.2fr 1fr 1fr 1fr;
-  gap:26px;
-  align-items:flex-start;
-}
-.footer a{
-  display:block;
-  color: var(--muted);
-  margin:8px 0;
-}
-.footer a:hover{color:var(--text)}
-.footer-brand{
-  font-family:'Montserrat',sans-serif;
-  font-weight:700;
-  font-size:18px;
-}
-.footer-title{color:var(--primary); font-weight:700; margin-bottom:10px}
-.footer-text{color:var(--muted); margin-top:8px}
-.footer-bottom{
-  margin-top:26px;
-  padding-top:22px;
-  border-top: 1px solid rgba(0,240,255,.12);
-  color: var(--muted2);
-  font-size:12px;
-}
+        <div class="grid-3">
+          <div class="card card-dark">
+            <h3>IA no WhatsApp</h3>
+            <p>Atendimento 24/7, qualificação de leads e suporte inteligente.</p>
+            <a class="card-link" href="#contato">Quero automatizar</a>
+          </div>
 
-/* Responsive */
-@media (max-width: 960px){
-  .hero-grid{grid-template-columns: 1fr; gap:28px}
-  .nav{display:none}
-  .section-title{font-size:30px}
-  .grid-3{grid-template-columns: 1fr}
-  .cta-box{flex-direction:column; align-items:flex-start}
-  .footer-grid{grid-template-columns: 1fr 1fr}
-  .form-row{grid-template-columns: 1fr}
-}
+          <div class="card card-dark">
+            <h3>Agentes de IA (Automação)</h3>
+            <p>Robôs que executam tarefas repetitivas e rotinas operacionais.</p>
+            <a class="card-link" href="#contato">Quero produtividade</a>
+          </div>
+
+          <div class="card card-dark">
+            <h3>Conteúdo com IA</h3>
+            <p>Calendário, ideias, legendas, roteiros e criação em escala.</p>
+            <a class="card-link" href="#contato">Quero consistência</a>
+          </div>
+
+          <div class="card card-dark">
+            <h3>Clone (Vídeos com IA)</h3>
+            <p>Vídeos realistas sem gravação: marketing, vendas e treinamento.</p>
+            <a class="card-link" href="#contato">Quero vídeos</a>
+          </div>
+
+          <div class="card card-dark">
+            <h3>Tráfego Pago Automatizado</h3>
+            <p>Otimização contínua, decisões orientadas por dados e mais ROI.</p>
+            <a class="card-link" href="#contato">Quero mais ROI</a>
+          </div>
+
+          <div class="card card-dark">
+            <h3>Vídeos Animados</h3>
+            <p>Animações que explicam, engajam e ajudam a vender.</p>
+            <a class="card-link" href="#contato">Quero animações</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section id="diferenciais" class="section differentials">
+      <div class="container">
+        <h2 class="section-title">Soluções reais. Resultados reais. Nada de IA genérica.</h2>
+        <p class="section-subtitle">
+          Criamos automações sob medida para o seu negócio — não templates prontos. O foco é valor real, rápido e mensurável.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>IA personalizada</h3>
+            <p>Treinada no seu contexto, com objetivos claros e entregas alinhadas ao seu processo.</p>
+          </div>
+          <div class="card">
+            <h3>Suporte humano + IA</h3>
+            <p>Consultoria de ponta a ponta para garantir implementação e resultado.</p>
+          </div>
+          <div class="card">
+            <h3>Implementação rápida</h3>
+            <p>Time-to-value curto: da ideia à automação funcionando em pouco tempo.</p>
+          </div>
+          <div class="card">
+            <h3>Qualidade de agência</h3>
+            <p>Conteúdo e vídeos com padrão profissional para fortalecer sua marca.</p>
+          </div>
+          <div class="card">
+            <h3>Escalável</h3>
+            <p>Você cresce sem aumentar custos na mesma proporção.</p>
+          </div>
+          <div class="card">
+            <h3>Foco em ROI</h3>
+            <p>Métricas e melhorias contínuas para maximizar retorno financeiro.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos" class="section testimonials">
+      <div class="container">
+        <h2 class="section-title">Empresas que escalam mais rápido usam a Interativa.</h2>
+        <p class="section-subtitle">Resultados típicos após implementar automação inteligente.</p>
+
+        <div class="grid-3">
+          <div class="card">
+            <p class="quote">“Reduzimos 40% do custo operacional em 30 dias.”</p>
+            <p class="quote-author">— Cliente (varejo)</p>
+          </div>
+          <div class="card">
+            <p class="quote">“Triplicamos o volume de atendimentos no WhatsApp sem aumentar equipe.”</p>
+            <p class="quote-author">— Cliente (serviços)</p>
+          </div>
+          <div class="card">
+            <p class="quote">“Ganhei consistência e escala com conteúdo automatizado e roteiros prontos.”</p>
+            <p class="quote-author">— Cliente (infoproduto)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta">
+      <div class="container cta-box">
+        <div>
+          <h2 class="cta-title">Pronto para aumentar suas vendas e reduzir custos?</h2>
+          <p class="cta-subtitle">Cada dia sem automação custa tempo, dinheiro e oportunidades. Vamos resolver isso hoje.</p>
+        </div>
+        <a class="btn btn-primary" href="#contato">Quero minha consultoria gratuita</a>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section contact">
+      <div class="container">
+        <h2 class="section-title">Vamos transformar seu negócio com IA?</h2>
+        <p class="section-subtitle">Preencha o formulário e receba uma consultoria gratuita para identificar oportunidades reais de automação.</p>
+
+        <form class="form" action="#" method="post">
+          <div class="form-row">
+            <label>
+              Nome
+              <input type="text" name="nome" placeholder="Seu nome" required />
+            </label>
+            <label>
+              Empresa
+              <input type="text" name="empresa" placeholder="Nome da empresa" />
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>
+              WhatsApp
+              <input type="tel" name="whatsapp" placeholder="(DDD) 9XXXX-XXXX" />
+            </label>
+            <label>
+              E-mail
+              <input type="email" name="email" placeholder="seu@email.com" required />
+            </label>
+          </div>
+
+          <label>
+            O que você deseja automatizar?
+            <select name="objetivo" required>
+              <option value="">Selecione uma opção</option>
+              <option>IA no WhatsApp</option>
+              <option>Agentes de IA (Automação)</option>
+              <option>Conteúdo com IA</option>
+              <option>Clone (Vídeos com IA)</option>
+              <option>Tráfego Pago Automatizado</option>
+              <option>Vídeos Animados</option>
+              <option>Outro</option>
+            </select>
+          </label>
+
+          <button class="btn btn-primary" type="submit">Quero minha consultoria gratuita</button>
+
+          <p class="form-foot">
+            Ou fale conosco pelo WhatsApp agora mesmo.
+            <a class="inline-link" href="#">Abrir WhatsApp</a>
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">IA Interativa</p>
+        <p class="footer-text">Automação inteligente para negócios que querem crescer.</p>
+      </div>
+
+      <div>
+        <p class="footer-title">Serviços</p>
+        <a href="#servicos">IA no WhatsApp</a>
+        <a href="#servicos">Agentes de IA</a>
+        <a href="#servicos">Conteúdo com IA</a>
+        <a href="#servicos">Tráfego Pago</a>
+      </div>
+
+      <div>
+        <p class="footer-title">Empresa</p>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+      <div>
+        <p class="footer-title">Contato</p>
+        <p class="footer-text">E-mail: contato@iainterativa.com.br</p>
+        <p class="footer-text">WhatsApp: (11) 9XXXX-XXXX</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 IA Interativa. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
