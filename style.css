@@ -326,14 +326,14 @@ a{color:inherit;text-decoration:none}
 .header-wrap{ padding: 18px 0 !important; }
 .brand{ gap: 12px !important; }
 .brand-logo{ height: 72px !important; width: auto !important; }
-/* Logo circular com mais zoom e borda preta */
+/* Logo circular com recorte mais fechado (remove bordas pretas) */
 .brand-logo{
   height: 72px !important;
   width: 72px !important;
   object-fit: cover;
   object-position: center;
   border-radius: 999px;
-  border: 2px solid #000;
+  border: 2px solid rgba(0,240,255,.35);
   background: #0A0F1E;
-  transform: scale(1.32);
+  transform: scale(1.18);
 }
