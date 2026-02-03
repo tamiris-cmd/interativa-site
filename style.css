@@ -312,7 +312,13 @@ a{color:inherit;text-decoration:none}
   .form-row{grid-template-columns: 1fr}
 } 
 .brand-logo{
-  height: 36px;
+  height: 58px;
   width: auto;
   display: block;
+}
+
+@media (max-width: 960px){
+  .brand-logo{
+    height: 44px;
+  }
 }
